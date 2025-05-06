@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #fef9f4;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+a {
+  color: #b88b4a;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Background images layered softly */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.13;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body::before {
+  top: 20px;
+  left: 10px;
+  width: 120px;
+  height: 140px;
+  background-image: url('https://cdn.iconscout.com/icon/free/png-256/floral-pattern-1-1888231.png');
+  filter: drop-shadow(0 0 3px rgba(184,139,74,0.3));
+}
+body::after {
+  bottom: 30px;
+  right: 10px;
+  width: 100px;
+  height: 120px;
+  background-image: url('https://cdn.iconscout.com/icon/free/png-256/floral-pattern-2-1888232.png');
+  filter: drop-shadow(0 0 3px rgba(184,139,74,0.3));
+}
+
+/* Extra floating backgrounds inside container */
+.floating-bg {
+  position: fixed;
+  z-index: 0;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.floating-bg.top-left {
+  top: 100px;
+  left: 20px;
+  width: 140px;
+  height: 140px;
+  background-image: url('https://cdn.iconscout.com/icon/free/png-256/floral-leaf-49-461561.png');
+  background-size: cover;
+}
+.floating-bg.bottom-left {
+  bottom: 150px;
+  left: 50px;
+  width: 120px;
+  height: 120px;
+  background-image: url('https://cdn.iconscout.com/icon/free/png-256/floral-leaf-48-461560.png');
+  background-size: cover;
+}
+.floating-bg.top-right {
+  top: 160px;
+  right: 20px;
+  width: 180px;
+  height: 180px;
+  background-image: url('https://cdn.iconscout.com/icon/free/png-256/floral-leaf-51-461563.png');
+  background-size: cover;
+}
+.floating-bg.bottom-right {
+  bottom: 100px;
+  right: 55px;
+  width: 130px;
+  height: 130px;
+  background-image: url('https://cdn.iconscout.com/icon/free/png-256/floral-leaf-50-461562.png');
+  background-size: cover;
+}
+
+/* Container */
+.container {
+  position: relative;
+  width: 90vw;
+  max-width: 350px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  z-index: 1;
+}
+.containerimg{
+    position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  z-index: 1;
+  opacity: 98%;
+  border-radius: 10px;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+nav a {
+  margin: 0 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
+header {
+  text-align: center;
+  padding: 60px 20px 45px;
+  background: linear-gradient(135deg, #f6eadf, #fef9f4);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(184,139,74,0.15);
+  position: relative;
+  overflow: visible;
+}
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin: 0;
+  color: #b88b4a;
+  letter-spacing: 0.06em;
+  text-shadow: 1px 1px 3px rgba(184,139,74,0.4);
+  z-index: 2;
+  position: relative;
+}
+header p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #735f3d;
+  letter-spacing: 0.06em;
+  z-index: 2;
+  position: relative;
+}
+/* Delicate vector swirl in header */
+header svg {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 100px;
+  height: 100px;
+  fill: none;
+  stroke: #d3af69;
+  stroke-width: 1.8;
+  opacity: 0.4;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+/* About Section */
+section.about {
+  margin-top: 30px;
+  background: #fff8ed;
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(184,139,74,0.1);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #6e5c3a;
+}
+section.about h2 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  color: #a07832;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Event Section */
+section.event {
+  margin-top: 30px;
+  background: #fff8ed;
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(184,139,74,0.1);
+  color: #6e5c3a;
+}
+section.event h2 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  color: #a07832;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.event-details {
+  text-align: center;
+  font-weight: 600;
+}
+.event-details p {
+  margin: 4px 0;
+  font-size: 1rem;
+}
+
+/* Gallery Section */
+section.gallery {
+  margin-top: 30px;
+}
+section.gallery h2 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  color: #a07832;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.8rem;
+  color: #bfa76e;
+  font-style: italic;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 350px) {
+  header h1 {
+    font-size: 2.4rem;
+  }
+  section.about, section.event {
+    padding: 20px 12px;
+  }
+}
+/* From Uiverse.io by mobinkakei */ 
+/* From Uiverse.io by OliverZeros */ 
+button {
+    all: unset;
+  }
+  
+  .button {
+    position: relative;
+    display: inline-flex;
+    height: 3.5rem;
+    align-items: center;
+    border-radius: 9999px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: Segoe UI;
+    font-size: 1.2rem;
+    font-weight: 640;
+    color: #fafaf6;
+    letter-spacing: -0.06em;
+  }
+  
+  .button-item {
+    background-color: transparent;
+    color: #1d1d1f;
+  }
+  
+  .button-item .button-bg {
+    border-color: rgba(255, 208, 116);
+    background-color: rgba(255, 208, 116);
+  }
+  
+  .button-inner,
+  .button-inner-hover,
+  .button-inner-static {
+    pointer-events: none;
+    display: block;
+  }
+  
+  .button-inner {
+    position: relative;
+  }
+  
+  .button-inner-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  
+  .button-bg {
+    overflow: hidden;
+    border-radius: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .button-bg,
+  .button-bg-layer,
+  .button-bg-layers {
+    display: block;
+  }
+  
+  .button-bg-layers {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -60%;
+    aspect-ratio: 1 / 1;
+    width: max(200%, 10rem);
+  }
+  
+  .button-bg-layer {
+    border-radius: 9999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+  }
+  
+  .button-bg-layer.-purple {
+    background-color: rgba(163, 116, 255);
+  }
+  
+  .button-bg-layer.-turquoise {
+    background-color: rgba(23, 241, 209);
+  }
+  
+  .button-bg-layer.-yellow {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 208, 116, var(--tw-bg-opacity));
+  }
+  
+  .button:hover .button-inner-static {
+    opacity: 0;
+    transform: translateY(-70%);
+    transition:
+      transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+      opacity 0.3s linear;
+  }
+  
+  .button:hover .button-inner-hover {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+      opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .button:hover .button-bg-layer {
+    transition:
+      transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+      opacity 0.3s linear;
+  }
+  
+  .button:hover .button-bg-layer-1 {
+    transform: scale(1);
+  }
+  
+  .button:hover .button-bg-layer-2 {
+    transition-delay: 0.1s;
+    transform: scale(1);
+  }
+  
+  .button:hover .button-bg-layer-3 {
+    transition-delay: 0.2s;
+    transform: scale(1);
+  }
+ 
+
+  /* From Uiverse.io by JaydipPrajapati1910 */ 
+
+  @keyframes pulse-ytk0dhmd {
+    to {
+      transform: perspective(336px) translateZ(168px);
+      opacity: 0;
+    }
+  }
+    /* From Uiverse.io by vinodjangid07 */ 
+.location {
+    width: 110px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: rgb(201, 183, 19);
+    border-radius: 30px;
+    color: rgb(19, 19, 19);
+    font-weight: 600;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+    padding-left: 8px;
+    transition-duration: .5s;
+  }
+  
+  .svgIcon {
+    height: 25px;
+    transition-duration: 1.5s;
+  }
+  
+  .bell path {
+    fill: rgb(19, 19, 19);
+  }
+  
+  .location:hover {
+    background-color: rgb(255, 188, 20);
+    transition-duration: .5s;
+  }
+  
+  .location:active {
+    transform: scale(0.97);
+    transition-duration: .2s;
+  }
+  
+  .location:hover .svgIcon {
+    transform: rotate(250deg);
+    transition-duration: 1.5s;
+  }
+  .veena{
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    z-index: 1;
+    opacity: 98%;
+    border-radius: 10px;
+  }
+  .anoo{
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    z-index: 1;
+    opacity: 98%;
+    border-radius: 10px;
+  }
+  /* From Uiverse.io by Peary74 */ 
+.btn {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    fill: #fd1853;
+  }
+  
+  .btn:hover > .icon {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: .2s linear;
+  }
+  
+  .btn:focus > .icon {
+    fill: #fd1853;
+    animation: grosseur .2s linear;
+  }
+  
+  @keyframes grosseur {
+    0% {
+      width: 50px;
+      height: 50px;
+      fill: #fd1853;
+    }
+  
+    100% {
+      width: 30px;
+      height: 30px;
+      fill: #fd1853;
+    }
+  }
+  
+  
+  
+  
+  
+  
